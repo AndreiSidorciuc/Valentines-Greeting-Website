@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>З Днем Закоханих ❤️</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body>
+    <!-- Language selector -->
+    <div class="language-selector">
+      <button class="lang-btn active" onclick="changeLanguage('uk')">
+        🇺🇦 UA
+      </button>
+      <button class="lang-btn" onclick="changeLanguage('de')">🇩🇪 DE</button>
+      <button class="lang-btn" onclick="changeLanguage('en')">🇬🇧 EN</button>
+    </div>
+
+    <header>
+      <h1 id="main-title">З Днем Закоханих ❤️</h1>
+      <p id="subtitle">Для найважливішої людини в моєму житті</p>
+      <div class="heart">💖</div>
+      <button class="love-btn" onclick="startLove()">
+        <span id="love-btn-text">Натисни, якщо кохаєш 💕</span>
+      </button>
+      <button id="runaway-btn" class="runaway-btn">
+        <span id="runaway-btn-text">Не кохаю</span>
+      </button>
+    </header>
+
+    <section class="message">
+      <p id="message-text-1">
+        Кохання — це коли кожен день з тобою стає святом.<br />
+        Дякую за твою усмішку, тепло і підтримку.<br />
+        Я безмежно щасливий(а), що ти є в моєму житті.
+      </p>
+      <p id="message-text-2">
+        Нехай цей День Закоханих стане ще одним красивим спогадом для нас 💕
+      </p>
+    </section>
+
+    <footer id="footer-text">З любов'ю 💌 | 14 лютого</footer>
+
+    <!-- Modal з слайдами -->
+    <div id="photoModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="slide active">
+          <img src="./src/img/IMG_0006.jpg" alt="Наші спогади" />
+          <div class="slide-text">Ти - моє сонце у похмурий день ☀️</div>
+        </div>
+        <div class="slide">
+          <img src="./src/img/IMG_2154.jpg" alt="Наші спогади" />
+          <div class="slide-text">Кожна мить з тобою - це магія ✨</div>
+        </div>
+        <div class="slide">
+          <img src="photo3.jpg" alt="Наші спогади" />
+          <div class="slide-text">Ти робиш моє життя яскравішим 🌈</div>
+        </div>
+        <div class="slide">
+          <img src="photo4.jpg" alt="Наші спогади" />
+          <div class="slide-text">З тобою я по-справжньому щасливий(а) 💕</div>
+        </div>
+        <div class="slide">
+          <img src="photo5.jpg" alt="Наші спогади" />
+          <div class="slide-text">Дякую, що ти є в моєму житті! ❤️</div>
+        </div>
+
+        <!-- <a class="prev" onclick="changeSlide(-1)">❮</a>
+        <a class="next" onclick="changeSlide(1)">❯</a> -->
+
+        <div class="slide-counter">
+          <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sad Modal -->
+    <div id="sadModal" class="sad-modal">
+      <div class="sad-modal-content">
+        <span class="big-heart">💔</span>
+        <div class="sad-text">
+          <p id="sad-text-1">Шкода...</p>
+          <p id="sad-text-2">Тепер ти так і не дізнаєшся,</p>
+          <p id="sad-text-3">що було б, коли б ти натиснула на "Кохаю"</p>
+          <p>😢</p>
+        </div>
+        <button class="sad-close" onclick="closeSadModal()">
+          <span id="close-btn-text">Закрити</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Music -->
+    <audio id="music" src="" loop></audio>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
