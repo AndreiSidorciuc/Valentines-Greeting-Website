@@ -16,11 +16,15 @@
   <body>
     <!-- Language selector -->
     <div class="language-selector">
-      <button class="lang-btn active" onclick="changeLanguage('uk')">
+      <button class="lang-btn active" onclick="changeLanguage('uk', event)">
         🇺🇦 UA
       </button>
-      <button class="lang-btn" onclick="changeLanguage('de')">🇩🇪 DE</button>
-      <button class="lang-btn" onclick="changeLanguage('en')">🇬🇧 EN</button>
+      <button class="lang-btn" onclick="changeLanguage('de', event)">
+        🇩🇪 DE
+      </button>
+      <button class="lang-btn" onclick="changeLanguage('en', event)">
+        🇬🇧 EN
+      </button>
     </div>
 
     <header>
@@ -72,9 +76,24 @@
           <img src="photo5.jpg" alt="Наші спогади" />
           <div class="slide-text">Дякую, що ти є в моєму житті! ❤️</div>
         </div>
-
-        <!-- <a class="prev" onclick="changeSlide(-1)">❮</a>
-        <a class="next" onclick="changeSlide(1)">❯</a> -->
+        <div class="slide">
+          <img src="photo6.jpg" alt="Наші спогади" />
+          <div class="slide-text">
+            Твоя усмішка - найкраще, що я бачу кожен день 😊
+          </div>
+        </div>
+        <div class="slide">
+          <img src="photo7.jpg" alt="Наші спогади" />
+          <div class="slide-text">
+            Поруч з тобою я вдома, де б ми не були 🏡
+          </div>
+        </div>
+        <div class="slide">
+          <img src="photo8.jpg" alt="Наші спогади" />
+          <div class="slide-text">
+            З тобою навіть звичайні миті стають особливими ✨
+          </div>
+        </div>
         <div class="slide-counter">
           <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
         </div>
